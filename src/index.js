@@ -1,21 +1,27 @@
 import "./styles.css";
 import { homepage } from "./pages/homepage.js";
 import { menu } from "./pages/menu.js";
+import { contact } from "./pages/contact.js";
 
 const contentDiv = document.querySelector("#content");
-const homeTab = homepage;
-const menuTab = menu;
 
 const homeBtn = document.querySelector(".homeBtn");
 const menuBtn = document.querySelector(".menuBtn");
-const aboutBtn = document.querySelector(".aboutBtn");
+const contactBtn = document.querySelector(".contactBtn");
+
+homepage();
 
 homeBtn.addEventListener("click", () => {
-  //   contentDiv.removeChild(contentDiv.firstChild);
-  contentDiv.appendChild(homeTab);
+  contentDiv.replaceChildren();
+  homepage();
 });
 
 menuBtn.addEventListener("click", () => {
-  contentDiv.removeChild(contentDiv.firstChild);
-  contentDiv.appendChild(menuTab);
+  contentDiv.replaceChildren();
+  menu();
+});
+
+contactBtn.addEventListener("click", () => {
+  contentDiv.replaceChildren();
+  contact();
 });

@@ -1,6 +1,8 @@
 export const homepage = () => {
+  const contentDiv = document.querySelector("#content");
   const homeTab = document.createElement("div");
   homeTab.className = "homeTab";
+  contentDiv.append(homeTab);
 
   const restaurantName = document.createElement("div");
   restaurantName.className = "restaurantName";
@@ -8,14 +10,21 @@ export const homepage = () => {
   homeTab.appendChild(restaurantName);
 
   const about = document.createElement("div");
-  about.className = "about";
+  about.className = "restaurantAbout";
   about.textContent =
     "We have such good food! The atmosphere and customer service also make you feel like you're eating in heaven! This is exactly the place you'd want to return to again and again!";
   homeTab.appendChild(about);
 
   const hours = document.createElement("div");
   hours.className = "hours";
+
+  const hours_title = document.createElement("div");
+  hours_title.className = "hoursTitle";
+  hours_title.textContent = "Hours";
+  hours.appendChild(hours_title);
+
   const hours_list = document.createElement("ol");
+  hours_list.className = "hoursList";
   hours.appendChild(hours_list);
   homeTab.appendChild(hours);
 
@@ -43,6 +52,4 @@ export const homepage = () => {
     day_container.appendChild(day_hours);
     hours_list.appendChild(day_container);
   });
-
-  return homeTab;
 };

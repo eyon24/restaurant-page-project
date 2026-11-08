@@ -1,25 +1,132 @@
-* {
+body {
   padding: 0;
   margin: 0;
-}
-
-body {
-  background-color: rgb(197, 194, 194);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: #f9c3c3;
 }
 
 .container {
-  background-color: #ffffff;
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  text-align: center;
+}
+
+header {
+  padding-top: 1rem;
+}
+
+header nav {
+  display: flex;
+  gap: 2rem;
+}
+
+header nav button {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 18px;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 10px 10px 0 0;
+  background-color: white;
 }
 
 #content {
+  width: 700px;
+  /* height: 100vh; */
+  border-radius: 10px;
+  background-color: white;
+  padding: 3rem 5rem;
+}
+
+.homeTab {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 2rem;
+}
+
+.restaurantName {
+  font-size: 32px;
+  text-decoration: underline;
+}
+
+.restaurantAbout {
+  font-size: 18px;
+}
+
+.hours {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hoursTitle {
+  font-size: 24px;
+}
+
+.hoursList {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 16px;
+  width: 20%;
+  border: 1px solid black;
+}
+
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.menuTitle {
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.menu_ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.menu_ul li {
+  border: 1px solid black;
+  padding: 1rem;
+}
+
+.menuItemName {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.menuItemPrice {
+  color: green;
+}
+
+.contact_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.contact_title {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.contactPerson {
+  padding: 2rem;
+  border: 1px solid black;
   width: 50%;
+}
+
+.personName {
+  font-size: 24px;
+  font-weight: 600;
 }
